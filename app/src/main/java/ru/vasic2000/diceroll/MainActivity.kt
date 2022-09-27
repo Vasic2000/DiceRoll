@@ -1,8 +1,10 @@
 package ru.vasic2000.diceroll
 
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -11,11 +13,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rollTextView : TextView = findViewById(R.id.textView)
+        val diceImageView : ImageView = findViewById(R.id.diceImage)
         val rollButton = findViewById<Button>(R.id.button)
 
-        rollButton.setOnClickListener{
-            rollTextView.setText(rollDice().toString())
+//        val dice1 : Bitmap = lo
+
+         rollButton.setOnClickListener {
+            var side : Int = rollDice()
+            when (side) {
+                1 -> diceImageView.setImageResource(R.drawable.dice1)
+                2 -> diceImageView.setImageResource(R.drawable.dice2)
+                3 -> diceImageView.setImageResource(R.drawable.dice3)
+                4 -> diceImageView.setImageResource(R.drawable.dice4)
+                5 -> diceImageView.setImageResource(R.drawable.dice5)
+                6 -> diceImageView.setImageResource(R.drawable.dice6)
+            }
         }
     }
 
