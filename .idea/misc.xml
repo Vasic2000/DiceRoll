@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Diceroll/app/src/main/res/drawable/btn_black95_pressed_black65.xml" value="0.143" />
+        <entry key="..\:/Android/Diceroll/app/src/main/res/drawable/button_game_levels.xml" value="0.143" />
+        <entry key="..\:/Android/Diceroll/app/src/main/res/drawable/dark_grey_color.xml" value="0.1" />
+        <entry key="..\:/Android/Diceroll/app/src/main/res/drawable/light_grey_color.xml" value="0.1" />
+        <entry key="..\:/Android/Diceroll/app/src/main/res/drawable/style_btn_black95.xml" value="0.143" />
         <entry key="..\:/Android/Diceroll/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>

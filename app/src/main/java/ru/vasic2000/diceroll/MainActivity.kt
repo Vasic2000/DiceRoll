@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
         val diceImageView : ImageView = findViewById(R.id.diceImage)
         val rollButton = findViewById<Button>(R.id.button)
 
-//        val dice1 : Bitmap = lo
-
          rollButton.setOnClickListener {
             var side : Int = rollDice()
             when (side) {
