@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">DiceRoll</string>
     <string name="roll">Roll</string>
+    <string name="one_dice">One</string>
+    <string name="two_dices">Two</string>
+    <string name="four_dices">Four</string>
+    <string name="title_1">One dice</string>
+    <string name="title_2">Two dices</string>
+    <string name="title_4">Four dices</string>
 </resources>
