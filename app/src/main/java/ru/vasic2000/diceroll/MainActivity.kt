@@ -18,11 +18,11 @@ import ru.vasic2000.diceroll.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    lateinit var diceImageView : ImageView
+//    lateinit var diceImageView : ImageView
 
-    //    Sounds
-    private lateinit var sounds : SoundPool
-    private var soundThrow : Int = 0
+//    //    Sounds
+//    private lateinit var sounds : SoundPool
+//    private var soundThrow : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,27 +42,20 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        diceImageView = findViewById(R.id.diceImage)
-        val rollButton = findViewById<Button>(R.id.button)
+//        diceImageView = findViewById(R.id.diceImage)
+//        val rollButton = findViewById<Button>(R.id.button)
 
         //      Эта строка позволяет управлять громкостью Media из приложения кнопками громче тише
         volumeControlStream = AudioManager.STREAM_MUSIC
-        soundInit()
-
-         rollButton.setOnClickListener {
-            sounds.play(soundThrow, 1f, 1f, 1, 0, 1f)
-            val threadDraw : SecondThread = SecondThread(this)
-             val winDrawThread = Thread(threadDraw)
-             winDrawThread.start()
-        }
+//        soundInit()
     }
 
-    private fun soundInit() {
-        sounds = SoundPool.Builder()
-            .setMaxStreams(2)
-            .build()
-        soundThrow = sounds.load(applicationContext, R.raw.dice, 1)
-    }
+//    private fun soundInit() {
+//        sounds = SoundPool.Builder()
+//            .setMaxStreams(2)
+//            .build()
+//        soundThrow = sounds.load(applicationContext, R.raw.dice, 1)
+//    }
 
     private fun rollDice() : Int {
         val dice = Dice(6)
