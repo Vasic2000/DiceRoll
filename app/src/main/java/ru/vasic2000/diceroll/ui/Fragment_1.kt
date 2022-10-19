@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import ru.vasic2000.diceroll.MainActivity
 import ru.vasic2000.diceroll.R
-import ru.vasic2000.diceroll.SecondThread
+import ru.vasic2000.diceroll.threads.OneDiceThread
 import ru.vasic2000.diceroll.databinding.OneDiceBinding
 
 class Fragment_1 : Fragment()  {
@@ -41,7 +40,7 @@ class Fragment_1 : Fragment()  {
 
         rollButton.setOnClickListener {
             sounds.play(soundThrow, 1f, 1f, 1, 0, 1f)
-            val threadDraw = SecondThread(diceImageView)
+            val threadDraw = OneDiceThread(diceImageView)
             val winDrawThread = Thread(threadDraw)
             winDrawThread.start()
         }
