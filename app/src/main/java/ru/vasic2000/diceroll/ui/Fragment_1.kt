@@ -34,11 +34,11 @@ class Fragment_1 : Fragment()  {
         val root: View = binding.root
 
         diceImageView = root.findViewById(R.id.diceImage)
-        val rollButton = root.findViewById<Button>(R.id.buttonRoll_1)
+        val rollButton1 = root.findViewById<Button>(R.id.buttonRoll_1)
 
         soundInit()
 
-        rollButton.setOnClickListener {
+        rollButton1.setOnClickListener {
             sounds.play(soundThrow, 1f, 1f, 1, 0, 1f)
             val threadDraw = OneDiceThread(diceImageView)
             val winDrawThread = Thread(threadDraw)
