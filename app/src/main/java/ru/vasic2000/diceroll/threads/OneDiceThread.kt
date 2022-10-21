@@ -1,9 +1,10 @@
-package ru.vasic2000.diceroll
+package ru.vasic2000.diceroll.threads
 
 import android.widget.ImageView
-import androidx.fragment.app.Fragment
+import ru.vasic2000.diceroll.MainActivity
+import ru.vasic2000.diceroll.R
 
-class SecondThread(private val imageView: ImageView) : Runnable {
+class OneDiceThread(private val imageView: ImageView) : Runnable {
 
     override fun run() {
         try {
