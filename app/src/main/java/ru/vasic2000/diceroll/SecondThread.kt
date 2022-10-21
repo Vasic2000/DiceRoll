@@ -1,6 +1,9 @@
 package ru.vasic2000.diceroll
 
-class SecondThread(private val mainActivity: MainActivity) : Runnable {
+import android.widget.ImageView
+import androidx.fragment.app.Fragment
+
+class SecondThread(private val imageView: ImageView) : Runnable {
 
     override fun run() {
         try {
@@ -12,52 +15,23 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         var side : Int = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
-            }
-        }
-
-        try {
-            Thread.sleep(50)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        }
-
-        side  = rollDice()
-
-        when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
-            }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
-            }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
-            }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
-            }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
-            }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
 
@@ -70,23 +44,52 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         side  = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
+            }
+        }
+
+        try {
+            Thread.sleep(50)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
+
+        side  = rollDice()
+
+        when (side) {
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
+            }
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
+            }
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
+            }
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
+            }
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
+            }
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
 
@@ -99,52 +102,23 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         side  = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
-            }
-        }
-
-        try {
-            Thread.sleep(50)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        }
-
-        side  = rollDice()
-
-        when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
-            }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
-            }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
-            }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
-            }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
-            }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
 
@@ -157,23 +131,52 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         side  = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
+            }
+        }
+
+        try {
+            Thread.sleep(50)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
+
+        side  = rollDice()
+
+        when (side) {
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
+            }
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
+            }
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
+            }
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
+            }
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
+            }
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
 
@@ -186,23 +189,23 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         side  = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                 mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
 
@@ -215,52 +218,23 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         side  = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
-            }
-        }
-
-        try {
-            Thread.sleep(150)
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        }
-
-        side  = rollDice()
-
-        when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
-            }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
-            }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
-            }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
-            }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
-            }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
 
@@ -273,23 +247,52 @@ class SecondThread(private val mainActivity: MainActivity) : Runnable {
         side  = rollDice()
 
         when (side) {
-            1 -> mainActivity.diceImageView.post{
-                mainActivity.diceImageView.setImageResource(R.drawable.dice1)
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
             }
-            2 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice2)
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
             }
-            3 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice3)
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
             }
-            4 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice4)
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
             }
-            5 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice5)
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
             }
-            6 -> mainActivity.diceImageView.post {
-                mainActivity.diceImageView.setImageResource(R.drawable.dice6)
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
+            }
+        }
+
+        try {
+            Thread.sleep(150)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
+
+        side  = rollDice()
+
+        when (side) {
+            1 -> imageView.post{
+                imageView.setImageResource(R.drawable.dice1)
+            }
+            2 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice2)
+            }
+            3 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice3)
+            }
+            4 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice4)
+            }
+            5 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice5)
+            }
+            6 -> imageView.post {
+                imageView.setImageResource(R.drawable.dice6)
             }
         }
     }
