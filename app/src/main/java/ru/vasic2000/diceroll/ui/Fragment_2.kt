@@ -56,7 +56,7 @@ class Fragment_2 : Fragment()  {
         sounds = SoundPool.Builder()
             .setMaxStreams(2)
             .build()
-        soundThrow = sounds.load(context, R.raw.dice, 1)
+        soundThrow = sounds.load(context, R.raw.dices_2, 1)
     }
 
 }
