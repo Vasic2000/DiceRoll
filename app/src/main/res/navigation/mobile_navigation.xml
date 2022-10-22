@@ -17,10 +17,4 @@
         android:label="@string/title_2"
         tools:layout="@layout/two_dices" />
 
-    <fragment
-        android:id="@+id/navigation_dice_4"
-        android:name="ru.vasic2000.diceroll.ui.Fragment_4"
-        android:label="@string/title_4"
-        tools:layout="@layout/four_dices" />
-
 </navigation>
