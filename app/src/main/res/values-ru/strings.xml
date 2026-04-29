@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Кубики</string>
+    <string name="roll">Бросок</string>
+    <string name="one_dice">Один</string>
+    <string name="two_dices">Два</string>
+    <string name="four_dices">Четыре</string>
+    <string name="title_1">Один кубик</string>
+    <string name="title_2">2 кубика</string>
+    <string name="title_4">4 кубика</string>
+</resources>
